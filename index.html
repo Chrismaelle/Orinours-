@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Modak&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script type="text/javascript" src="./display_product.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ce6bb10a35.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Orinours</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="header">
+          <a class="logo" href="index.html"
+            ><img src="./API/JWDP5/images/logo.JPG" alt="logo Orinoco"
+          /></a>
+          <input type="checkbox" id="chk" />
+          <label for="chk" class="show-menu-btn">
+            <i class="fas fa-ellipsis-h"></i>
+          </label>
+          <ul class="menu">
+            <li><a href="index.html">Les N'ours</a></li>
+            <li><a href="page_panier.html">Panier</a></li>
+            <label for="chk" class="hide-menu-btn">
+              <i class="fas fa-times"></i>
+            </label>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Partie 1 : Les Titres -->
+    <section id="first_section">
+      <h1 id="my_title"><span class="by">Orinours</span></h1>
+      <h3>by Orinoco</h3>
+    </section>
+    <!-- Partie 2 : Les Articles -->
+    <section id="catalogue" class="partie__ourson"></section>
+    <footer>
+      <section id="footer" class="footer_catalogue">
+        <ul>
+          <li><a href=".">Contact</a></li>
+          <li><a href="https://www.facebook.com/">Facebook</a></li>
+          <li><a href="#">Conditions d'utilisations</a></li>
+        </ul>
+      </section>
+    </footer>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", async function () {
+        const result = await recupInfo();
+        console.log(result);
+        createProductCard(result);
+      });
+    </script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
