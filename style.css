@@ -112,6 +112,10 @@
   #chk:checked ~ .menu {
     right: 0;
   }
+  #first_section h3 {
+    padding-bottom: 15px;
+    width: 300px;
+  }
 }
 
 /* Form Ourson Card */
@@ -179,6 +183,37 @@
   font-family: "Lobster", cursive;
 }
 
+@media screen and (max-width: 800px) {
+  .partie__ourson {
+    margin-top: 25px;
+  }
+  .partie__ourson .PartieOurson {
+    margin: 10px 3px;
+  }
+  #my_title {
+    font-size: 4rem;
+  }
+  .PartieOurson {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .imgOurson {
+    max-height: 132px;
+    max-width: 200px;
+  }
+  .PartieOurson figure {
+    padding: 10px 0;
+  }
+  .description_ourson h3 {
+    margin: 0;
+    text-align: center;
+  }
+  .PartieOurson .tarifs {
+    padding: 0;
+  }
+}
+
 /* form Footer */
 
 .footer_catalogue {
@@ -204,6 +239,15 @@
 .footer_catalogue ul li a:hover {
   color: rgb(193, 0, 0);
 }
+
+@media screen and (max-width: 800px) {
+  .footer_catalogue ul {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0 0 0;
+  }
+}
+
 /* FORM PAGE PRODUCT */
 
 #page_product {
