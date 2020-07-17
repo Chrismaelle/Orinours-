@@ -1,0 +1,244 @@
+/* Form Header + Section Titre */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.header {
+  height: 100px;
+  background: rgb(243, 233, 241);
+  padding: 0 20px;
+  color: #ffffff;
+}
+.logo {
+  float: left;
+}
+.menu {
+  float: right;
+  line-height: 100px;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+.menu a {
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+  font-family: "Architects Daughter", cursive;
+  font-weight: bold;
+}
+.show-menu-btn,
+.hide-menu-btn {
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+.show-menu-btn {
+  float: right;
+}
+.show-menu-btn i {
+  line-height: 100px;
+}
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+  color: rgb(193, 0, 0);
+}
+#chk {
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+#first_section {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  background-color: rgb(83, 83, 83);
+  padding: 50px;
+  width: 100%;
+}
+#first_section h3 {
+  width: 100%;
+  max-width: 1365px;
+  display: flex;
+  justify-content: flex-end;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+#my_title {
+  font-size: 15rem;
+  margin: 0;
+}
+.by {
+  color: #e9afc6;
+  margin-bottom: 0;
+  font-family: "Architects Daughter", cursive;
+  line-height: 150px;
+}
+@media screen and (max-width: 800px) {
+  .show-menu-btn,
+  .hide-menu-btn {
+    display: block;
+  }
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgb(243, 233, 241);
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    transition: 0.7s;
+  }
+  .menu a {
+    display: block;
+    padding: 20px;
+  }
+  .hide-menu-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #chk:checked ~ .menu {
+    right: 0;
+  }
+}
+
+/* Form Ourson Card */
+
+.PartieOurson {
+  border: 4mm ridge rgb(243, 233, 241);
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+}
+.imgOurson {
+  height: 299px;
+  width: 450px;
+  margin: 0;
+  box-shadow: 5px 2.5px 2.5px rgb(141, 141, 141);
+}
+.conteneurImg {
+  margin: 0;
+  padding: 25px;
+}
+.description_ourson {
+  padding: 25px 0;
+}
+.description_ourson h3 {
+  font-size: 3rem;
+  line-height: 100px;
+  font-family: "Modak", sans-serif;
+  background: rgb(202, 121, 63);
+  background: linear-gradient(
+    159deg,
+    rgba(202, 121, 63, 1) 0%,
+    rgba(168, 101, 158, 1) 25%,
+    rgba(140, 85, 236, 1) 60%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.id_ourson {
+  line-height: 15px;
+}
+.description_ourson p span {
+  font-weight: bold;
+  color: rgba(202, 121, 63, 1);
+}
+.description_ourson p,
+.description_ourson p span {
+  font-family: "Lobster", cursive;
+}
+.tarifs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  padding-right: 25px;
+}
+.prix_ourson p {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Lobster", cursive;
+  color: rgba(168, 101, 158, 1);
+}
+.ajout_panier p a {
+  font-size: 1.5rem;
+  color: rgba(140, 85, 236, 1);
+  font-family: "Lobster", cursive;
+}
+
+/* form Footer */
+
+.footer_catalogue {
+  background-color: rgb(243, 233, 241);
+  height: 100px;
+  text-align: center;
+}
+.footer_catalogue ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding-top: 40px;
+}
+.footer_catalogue ul li a {
+  text-decoration: none;
+  font-family: "Architects Daughter", cursive;
+  font-weight: bold;
+  color: #000000;
+  text-transform: uppercase;
+}
+.footer_catalogue ul li a:hover {
+  color: rgb(193, 0, 0);
+}
+/* FORM PAGE PRODUCT */
+
+#page_product {
+  width: 80%;
+  margin-left: 100px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+.onlyTeddy figure img {
+  height: 499px;
+  width: 650px;
+  margin: 0 0 50px 0;
+  border: 3px solid rgb(141, 141, 141);
+  box-shadow: 10px 5px 5px rgb(243, 233, 241);
+}
+.description_Teddy h3 {
+  font-size: 3rem;
+  line-height: 100px;
+  font-family: "Modak", sans-serif;
+  color: rgba(202, 121, 63, 1);
+}
+.description_Teddy p span,
+.labelForColor label {
+  font-weight: bold;
+  color: rgba(168, 101, 158, 1);
+}
+.description_Teddy p,
+.description_Teddy p span,
+.labelForColor label {
+  font-family: "Lobster", cursive;
+}
+.divTarifs .prixTeddy p {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Lobster", cursive;
+  color: rgba(140, 85, 236, 1);
+}
