@@ -91,8 +91,6 @@ let recupCard = {
   },
 };
 
-// APPEL DES FONCTIONS //
-
 recupCard
   .recupInfo()
   .then(function (response) {
@@ -114,6 +112,8 @@ recupCard
     });
     recupCard.insertDescription(teddyDescription, response);
     recupCard.insertButtonCart(mainSection, response);
+
+    // APPEL DES FONCTIONS //
 
     // EVENEMENTS //
 

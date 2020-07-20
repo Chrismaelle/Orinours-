@@ -116,6 +116,9 @@
     padding-bottom: 15px;
     width: 300px;
   }
+  #first_section {
+    padding: 0;
+  }
 }
 
 /* Form Ourson Card */
@@ -252,10 +255,14 @@
 
 #page_product {
   width: 80%;
-  margin-left: 100px;
   margin-top: 80px;
   margin-bottom: 80px;
   text-align: center;
+}
+.conteneur {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .onlyTeddy figure img {
   height: 499px;
@@ -285,4 +292,245 @@
   font-weight: bold;
   font-family: "Lobster", cursive;
   color: rgba(140, 85, 236, 1);
+}
+.boutonPanier {
+  border-radius: 10px;
+  padding: 10px 50px;
+  background: rgb(202, 121, 63);
+  background: linear-gradient(
+    159deg,
+    rgba(202, 121, 63, 1) 0%,
+    rgba(168, 101, 158, 1) 35%,
+    rgba(140, 85, 236, 1) 60%
+  );
+  color: #f3e9f1;
+  font-size: 2rem;
+  font-family: "Architects Daughter", cursive;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 800px) {
+  .onlyTeddy figure img {
+    height: 187px;
+    width: 250px;
+  }
+  .boutonPanier {
+    font-size: 1.5rem;
+  }
+}
+
+/* Form Page Panier */
+
+#infoPanier h2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Modak", sans-serif;
+  font-size: 3rem;
+  background: rgb(202, 121, 63);
+  background: linear-gradient(
+    159deg,
+    rgba(202, 121, 63, 1) 5%,
+    rgba(168, 101, 158, 1) 35%,
+    rgba(140, 85, 236, 1) 60%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#titreCommande {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+#nomCommande,
+#couleurCommande,
+#prixCommande {
+  font-family: "Lobster", cursive;
+  font-size: 1.2rem;
+}
+.detailOursonAchat {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin-left: 90px;
+  border: solid 1px #000000;
+  margin-bottom: 30px;
+}
+#fig_pic_cart img {
+  height: 100px;
+  width: 150px;
+  border: solid 1px grey;
+}
+#myDetailName {
+  width: 26%;
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+#myDetailColor {
+  width: 47%;
+  margin-top: 90px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+#myDetailPrice {
+  width: 27%;
+  text-align: center;
+  margin-top: 90px;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+#divTotal {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: center;
+}
+#totalPrice {
+  margin-right: 50px;
+  font-family: "Lobster", cursive;
+  font-size: 2rem;
+  background: rgb(202, 121, 63);
+  background: linear-gradient(
+    159deg,
+    rgba(202, 121, 63, 1) 5%,
+    rgba(168, 101, 158, 1) 35%,
+    rgba(140, 85, 236, 1) 60%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#totalPriceCalcul {
+  font-family: "Lobster", cursive;
+  font-size: 2rem;
+}
+#deleteButton {
+  border: none;
+  background-color: white;
+  font-family: "Lobster", cursive;
+}
+#deleteButton:hover {
+  color: red;
+}
+#div_inform_form p {
+  text-align: center;
+  font-size: 1.6rem;
+  font-family: "Lobster", cursive;
+  margin: 30px 0;
+}
+#my_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#div_form_first_name,
+#div_form_name,
+#div_form_address,
+#div_form_city,
+#div_form_email {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+#div_form_address {
+  width: 199px;
+}
+#div_confirm input {
+  border-radius: 10px;
+  padding: 10px 50px;
+  background: rgb(202, 121, 63);
+  background: linear-gradient(
+    159deg,
+    rgba(202, 121, 63, 1) 0%,
+    rgba(168, 101, 158, 1) 35%,
+    rgba(140, 85, 236, 1) 60%
+  );
+  color: #f3e9f1;
+  font-size: 2rem;
+  font-family: "Architects Daughter", cursive;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+#div_Error_Button {
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  #my_form {
+    display: flex;
+    flex-direction: column;
+  }
+  #div_confirm input {
+    max-width: 100%;
+    font-size: 1rem;
+    margin: 30px 0;
+  }
+  #div_form_first_name,
+  #div_form_name,
+  #div_form_address,
+  #div_form_city,
+  #div_form_email {
+    margin-bottom: 40px;
+  }
+  .detailOursonAchat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 30px 0;
+  }
+  #myDetailName,
+  #myDetailColor,
+  #myDetailPrice {
+    width: 100%;
+    margin: 0;
+  }
+  #fig_pic_cart img {
+    width: 200px;
+    height: 150px;
+  }
+  #titreCommande {
+    display: none;
+  }
+  #div_inform_form p {
+    margin: 30px 0 30px 0;
+  }
+  #divDelete {
+    margin: 0;
+  }
+  #divTotal {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  #totalPrice {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: 1024px) {
+  #my_form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+  }
+  .detailOursonAchat {
+    margin: 30px 50px;
+  }
+  #infoPanier h2 {
+    font-size: 5rem;
+  }
+  #div_form_first_name,
+  #div_form_name,
+  #div_form_address,
+  #div_form_city,
+  #div_form_email {
+    border: solid grey 1.5px;
+  }
 }

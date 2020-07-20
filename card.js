@@ -19,6 +19,7 @@ const cartEmpty = function () {
     infoCart.appendChild(divEmpty);
     divEmpty.id = "alertCartEmpty";
     divEmpty.innerHTML = "Votre Panier est vide";
+    //const footerCartEmpty = document.getElementById('footer');
   }
 };
 /*------ fonction pour alimenter le tableau de commande -----*/
@@ -61,7 +62,7 @@ const myCommand = function () {
   const totalPrice = document.createElement("div");
   divTotal.appendChild(totalPrice);
   totalPrice.id = "totalPrice";
-  totalPrice.innerHTML = "Total de votre Commande : ";
+  totalPrice.innerHTML = "Total de votre Commande";
   const totalPriceCalcul = document.createElement("div");
   divTotal.appendChild(totalPriceCalcul);
   totalPriceCalcul.id = "totalPriceCalcul";
@@ -80,20 +81,6 @@ const myCommand = function () {
     let calculPrice = arrayPrice.reduce(calculator);
     totalPriceCalcul.innerHTML = calculPrice + " " + "€";
   }
-
-  const buttonEmptyCart = document.createElement("button");
-  const divButton = document.createElement("div");
-  detailCart.appendChild(divButton);
-  divButton.id = "divDelete";
-  divButton.appendChild(buttonEmptyCart);
-  buttonEmptyCart.id = "deleteButton";
-  buttonEmptyCart.setAttribute("type", "submit");
-  buttonEmptyCart.innerHTML = "Supprimer mon panier";
-
-  buttonEmptyCart.addEventListener("click", function (e) {
-    localStorage.clear();
-    cartEmpty();
-  });
 };
 
 /*----------- Fonction pour ajout Formulaire ----------*/
@@ -114,14 +101,11 @@ function addForm() {
   const divFormFirstName = document.createElement("div");
   myForm.appendChild(divFormFirstName);
   divFormFirstName.id = "div_form_first_name";
-  const labelFirstName = document.createElement("label");
-  divFormFirstName.appendChild(labelFirstName);
-  labelFirstName.setAttribute("for", "prénom");
-  labelFirstName.innerHTML = "Prénom :*";
   const inputFirstName = document.createElement("input");
   divFormFirstName.appendChild(inputFirstName);
   inputFirstName.setAttribute("type", "text");
   inputFirstName.setAttribute("id", "firstname");
+  inputFirstName.setAttribute("placeholder", "Prénom");
   inputFirstName.addEventListener("change", function (e) {
     console.log(inputFirstName.value);
     let value = e.target.value;
@@ -147,14 +131,11 @@ function addForm() {
   const divFormName = document.createElement("div");
   myForm.appendChild(divFormName);
   divFormName.id = "div_form_name";
-  const labelName = document.createElement("label");
-  divFormName.appendChild(labelName);
-  labelName.setAttribute("for", "name");
-  labelName.innerHTML = "Nom :*";
   const inputName = document.createElement("input");
   divFormName.appendChild(inputName);
   inputName.setAttribute("type", "text");
   inputName.setAttribute("id", "lastname");
+  inputName.setAttribute("placeholder", "Nom");
 
   inputName.addEventListener("change", function (e) {
     console.log(inputName.value);
@@ -181,13 +162,10 @@ function addForm() {
   const divFormAddress = document.createElement("div");
   myForm.appendChild(divFormAddress);
   divFormAddress.id = "div_form_address";
-  const labelAdress = document.createElement("label");
-  divFormAddress.appendChild(labelAdress);
-  labelAdress.setAttribute("for", "adresse");
-  labelAdress.innerHTML = "Adresse :*";
   const textAreaAddress = document.createElement("textarea");
   divFormAddress.appendChild(textAreaAddress);
   textAreaAddress.setAttribute("type", "text");
+  textAreaAddress.setAttribute("placeholder", "Adresse");
 
   textAreaAddress.addEventListener("change", function (e) {
     console.log(textAreaAddress.value);
@@ -209,14 +187,11 @@ function addForm() {
   const divFormCity = document.createElement("div");
   myForm.appendChild(divFormCity);
   divFormCity.id = "div_form_city";
-  const labelCity = document.createElement("label");
-  divFormCity.appendChild(labelCity);
-  labelCity.setAttribute("for", "ville");
-  labelCity.innerHTML = "Ville :*";
   const inputCity = document.createElement("input");
   divFormCity.appendChild(inputCity);
   inputCity.setAttribute("type", "text");
   inputCity.setAttribute("id", "city");
+  inputCity.setAttribute("placeholder", "Ville");
   inputCity.addEventListener("change", function (e) {
     console.log(inputCity.value);
     let value = e.target.value;
@@ -242,14 +217,11 @@ function addForm() {
   const divFormEmail = document.createElement("div");
   myForm.appendChild(divFormEmail);
   divFormEmail.id = "div_form_email";
-  const labelEmail = document.createElement("label");
-  divFormEmail.appendChild(labelEmail);
-  labelEmail.setAttribute("for", "email");
-  labelEmail.innerHTML = "Email :*";
   const inputEmail = document.createElement("input");
   divFormEmail.appendChild(inputEmail);
   inputEmail.setAttribute("type", "email");
   inputEmail.setAttribute("id", "emailAd");
+  inputEmail.setAttribute("placeholder", "Email");
   inputEmail.addEventListener("change", function (e) {
     console.log(inputEmail.value);
     let value = e.target.value;
@@ -281,6 +253,20 @@ function addForm() {
   inputConfirmOrder.id = "confirm_order";
   inputConfirmOrder.setAttribute("type", "submit");
   inputConfirmOrder.setAttribute("value", "Valider ma commande");
+
+  const buttonEmptyCart = document.createElement("button");
+  const divButton = document.createElement("div");
+  my_form.appendChild(divButton);
+  divButton.id = "divDelete";
+  divButton.appendChild(buttonEmptyCart);
+  buttonEmptyCart.id = "deleteButton";
+  buttonEmptyCart.setAttribute("type", "submit");
+  buttonEmptyCart.innerHTML = "Supprimer mon panier";
+
+  buttonEmptyCart.addEventListener("click", function (e) {
+    localStorage.clear();
+    cartEmpty();
+  });
 
   inputConfirmOrder.addEventListener("click", function (e) {
     e.preventDefault();
@@ -339,14 +325,6 @@ function emailIsValid(value) {
     value
   );
 }
-/////////////////// NAVIGATEUR ////////////////
-let btn = document.querySelector(".toggle_btn");
-let nav = document.querySelector(".nav");
-
-btn.onclick = function () {
-  nav.classList.toggle("nav__open");
-  nav.style.zIndex = "1";
-};
 
 //////////////////// PROMISE REQUETE POST ////////////////////
 function sendPost(url, toSend) {
