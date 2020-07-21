@@ -459,7 +459,9 @@
 #div_Error_Button {
   text-align: center;
 }
-
+#alertCartEmpty {
+  text-align: center;
+}
 @media screen and (max-width: 800px) {
   #my_form {
     display: flex;
@@ -532,5 +534,116 @@
   #div_form_city,
   #div_form_email {
     border: solid grey 1.5px;
+  }
+}
+/* Form Page Thanks */
+
+#page_remerciements {
+  text-align: center;
+  border: 2px solid grey;
+  margin: 50px 100px;
+}
+#thanks img {
+  box-shadow: 5px 2.5px 2.5px rgb(141, 141, 141);
+  margin: 30px 0;
+}
+#premiere_partie {
+  font-family: "Architects Daughter", cursive;
+  font-size: 5rem;
+  margin: 50px 0;
+}
+#prix_achat {
+  font-family: "Lobster", cursive;
+  font-size: 5rem;
+  color: #e9afc6;
+}
+#deuxieme_partie {
+  font-family: "Architects Daughter", cursive;
+  font-size: 3rem;
+  margin: 30px 0;
+}
+#order_id {
+  font-family: "Lobster", cursive;
+  font-size: 2.5rem;
+  color: #e9afc6;
+}
+#troisieme_partie {
+  font-family: "Architects Daughter", cursive;
+  font-size: 1.5rem;
+}
+.merci {
+  font-family: "Lobster", cursive;
+  font-size: 4rem;
+  color: #e9afc6;
+}
+@media screen and (max-width: 800px) {
+  #thanks img {
+    width: 250px;
+    height: 227px;
+  }
+  #page_remerciements {
+    margin: 15px 0;
+  }
+  #premiere_partie {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+  #deuxieme_partie {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  #order_id {
+    font-size: 2rem;
+  }
+  #troisieme_partie {
+    font-size: 1.1rem;
+  }
+  .merci {
+    font-size: 2rem;
+  }
+}
+
+/* Form Mentions Légales */
+
+.mention {
+  border: solid 1px grey;
+  width: 90%;
+  margin: 30px 100px;
+  padding: 50px;
+}
+.mention h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Architects Daughter", cursive;
+  font-size: 3rem;
+}
+.mention h3 {
+  font-family: "Lobster", cursive;
+  font-size: 2.5rem;
+  color: #e9afc6;
+  text-align: center;
+}
+.mention ul {
+  list-style-type: none;
+}
+.mention p {
+  text-align: justify;
+}
+@media screen and (max-width: 800px) {
+  .mention {
+    margin: 30px 0;
+    width: 100%;
+  }
+  .mention h3 {
+    font-size: 2rem;
+  }
+  .mention ul {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
+  .mention {
+    width: 100%;
+    margin: 30px 0;
   }
 }

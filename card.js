@@ -93,7 +93,7 @@ function addForm() {
   divInformForm.appendChild(paragraphInform);
   paragraphInform.id = "paragraph_inform";
   paragraphInform.innerHTML =
-    "Pour pouvoir valider votre commande, merci de remplir tous les champs.";
+    "Afin de valider votre commande, merci de remplir tous les champs.";
   const myForm = document.createElement("form");
   myBask.appendChild(myForm);
   myForm.id = "my_form";

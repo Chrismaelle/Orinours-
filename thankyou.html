@@ -1,88 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_page_panier.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Modak&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script type="text/javascript" src="./display_product.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ce6bb10a35.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Orinours</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <section class="bg-info">
-            <div class="container">
-                <div class="row">
-                    <nav class="col navbar navbar-expand-lg  navbar-dark text-center">
-                        <a class="navbar-brand" href="index.html">ORINOURS</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div id="navbarContent" class="collapse navbar-collapse">
-                            <ul class="navbar-nav">
-                                <li class="nav-item active ">
-                                    <a class="nav-link" href="index.html">Accueil</a>
-                                </li>
-                                <li class="nav-item active ">
-                                    <a class="nav-link" href="page_panier.html">Panier</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div> 
-            </div>
-        </section>
-    </header>
-    
-    <section class="container mt-5 text-center mb-5">
-        <H1>Commande confirmée !</H1>
-        <h2>Merci Fabien d'avoir agrandit la famille d'Orinours</h2>
-
-        <img src="API/JWDP5/images/famille.jpg" alt="">
-
-        <div>
-            <h3>Numéro de commande</h3>
-            <p>hfbezifn12-6fg4z-ddzw-45654-ezf546469cd4ef5za6d</p>
-            <h3>Montant à payer</h3>
-            <p>45 €</p>
-            <button type="button" class="btn btn-secondary"><a href="index.html">Retour à l'accueil</a></button>
+      <nav>
+        <div class="header">
+          <a class="logo" href="index.html"
+            ><img src="./JWDP5-master/images/logo.JPG" alt="logo Orinoco"
+          /></a>
+          <input type="checkbox" id="chk" />
+          <label for="chk" class="show-menu-btn">
+            <i class="fas fa-ellipsis-h"></i>
+          </label>
+          <ul class="menu">
+            <li><a href="index.html">Les N'ours</a></li>
+            <li><a href="page_panier.html">Panier</a></li>
+            <label for="chk" class="hide-menu-btn">
+              <i class="fas fa-times"></i>
+            </label>
+          </ul>
         </div>
+      </nav>
+    </header>
+    <!-- Partie 1 : Les Titres -->
+    <section id="first_section">
+      <h1 id="my_title"><span class="by">Orinours</span></h1>
+      <h3>by Orinoco</h3>
     </section>
-    
+    <!--Section vente des articles-->
+    <section id="page_remerciements">
+      <div id="thanks">
+        <p id="premiere_partie">
+          Merci pour ton adoption d'une valeur de
+        </p>
+        <p id="prix_achat"></p>
+        <img src="JWDP5-master/images/famille.jpg" alt="famille Orinours" />
+      </div>
+      <div id="thanks2">
+        <p id="deuxieme_partie">Ton numéro Adoptant est le :</p>
+        <p id="order_id"></p>
+      </div>
+      <div id="thanks3">
+        <p id="troisieme_partie">
+          Si ton ours ne te comble pas de bonheur,</br>tu auras besoin de ton numéro
+          Adoptant pour démarrer une thérapie !
+        </p>
+        <p class="merci">
+          La famille Orinours te remercie, et te souhaite une belle nuit.
+        </p>
+      </div>
+    </section>
 
-    <footer class="bg-light">
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <ul class="list-inline text-center">
-                    <li class="list-inline-item col-4 pt-2"><a href=".">Contact</a></li>
-                    <li class="list-inline-item">&middot;</li>
-                    <li class="list-inline-item col-4"><a href="https://www.facebook.com/">Facebook</a></li>
-                    <li class="list-inline-item col "><a href="#">Conditions d'utilisations</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+    <footer>
+      <section id="footer" class="footer_catalogue">
+        <ul>
+          <li><a href="mailto:contact@orinours.com">Contact</a></li>
+          <li><a href="https://www.facebook.com/">Facebook</a></li>
+          <li><a href="mentions.html">Mentions Légales</a></li>
+        </ul>
+      </section>
     </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>
+    <script src="thanks.js"></script>
+  </body>
 </html>
