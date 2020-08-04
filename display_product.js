@@ -61,7 +61,7 @@ let createCard = {
     newP6.appendChild(newA);
     newA.className = "lien_page_product";
     newA.setAttribute("href", "./page_produit.html?id=" + idLienTeddies);
-    newA.innerHTML = "Personnaliser le !";
+    newA.innerHTML = "Personnalisez le !";
   },
   serverOut: function () {
     const myH1 = document.getElementById("my_title");

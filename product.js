@@ -108,12 +108,9 @@ recupCard
     const chooseColor = document.querySelector("select");
     chooseColor.addEventListener("change", function (e) {
       //evenement pour voir la couloir choisi
-      console.log(chooseColor.value);
     });
     recupCard.insertDescription(teddyDescription, response);
     recupCard.insertButtonCart(mainSection, response);
-
-    // APPEL DES FONCTIONS //
 
     // EVENEMENTS //
 

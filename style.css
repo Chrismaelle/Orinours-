@@ -546,6 +546,7 @@
 #thanks img {
   box-shadow: 5px 2.5px 2.5px rgb(141, 141, 141);
   margin: 30px 0;
+  width: 80%;
 }
 #premiere_partie {
   font-family: "Architects Daughter", cursive;
@@ -577,10 +578,6 @@
   color: #e9afc6;
 }
 @media screen and (max-width: 800px) {
-  #thanks img {
-    width: 250px;
-    height: 227px;
-  }
   #page_remerciements {
     margin: 15px 0;
   }

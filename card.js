@@ -54,6 +54,20 @@ const myCommand = function () {
     myDetailPrice.id = "myDetailPrice";
     myDetailPrice.innerHTML =
       [teddiesAdded[i].price].map((i) => i / 100) + " " + "€";
+
+    const buttonEmptyCart1 = document.createElement("button");
+    const divButton1 = document.createElement("div");
+    myDetail.appendChild(divButton1);
+    divButton1.id = "divDeleteOne";
+    divButton1.appendChild(buttonEmptyCart1);
+    buttonEmptyCart1.id = "deleteButtonOne";
+    buttonEmptyCart1.setAttribute("type", "submit");
+    buttonEmptyCart1.innerHTML = "X";
+
+    buttonEmptyCart1.addEventListener("click", function (e) {
+      localStorage.removeItem("product");
+      cartEmpty();
+    });
   }
   // Partie Total Commande
   const divTotal = document.createElement("div");
